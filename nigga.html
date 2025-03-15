@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Tường 8/3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            background-color: #ff69b4;
+            color: white;
+            padding: 20px;
+            font-size: 40px;
+            font-weight: bold;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #ffb6c1;
+            padding: 15px;
+            width: 100%;
+            margin-top: 80px;
+        }
+        .nav button {
+            background: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+            color: #ff69b4;
+        }
+        .nav button:hover {
+            background: #ff69b4;
+            color: white;
+        }
+        .container {
+            display: none;
+            padding: 25px;
+            font-size: 20px;
+            max-width: 800px;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .active {
+            display: block;
+        }
+        .footer {
+            background-color: #ff69b4;
+            color: white;
+            padding: 12px;
+            margin-top: 20px;
+            width: 100%;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 10px;
+        }
+        .image-container img {
+            width: calc(33.33% - 10px);
+            max-width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+        .content-img {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        .paragraph-container {
+            width: 100%;
+        }
+        /* Bỏ khung xung quanh phần hình ảnh */
+        #hinh-anh .container {
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0;<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Tường 8/3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            background-color: #ff69b4;
+            color: white;
+            padding: 20px;
+            font-size: 40px;
+            font-weight: bold;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #ffb6c1;
+            padding: 15px;
+            width: 100%;
+            margin-top: 80px;
+        }
+        .nav button {
+            background: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+            color: #ff69b4;
+        }
+        .nav button:hover {
+            background: #ff69b4;
+            color: white;
+        }
+        .container {
+            display: none;
+            padding: 25px;
+            font-size: 20px;
+            max-width: 800px;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .active {
+            display: block;
+        }
+        .footer {
+            background-color: #ff69b4;
+            color: white;
+            padding: 12px;
+            margin-top: 20px;
+            width: 100%;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 10px;
+        }
+        .image-container img {
+            width: calc(33.33% - 10px);
+            max-width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+        .content-img {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        .paragraph-container {
+            width: 100%;
+        }
+        /* Bỏ khung xung quanh phần hình ảnh */
+        #hinh-anh .container {
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0;
+        }
+        /* Ẩn thanh điều khiển âm thanh */
+        iframe {
+            display: none;
+        }
+    </style>
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.container').forEach(section => section.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <!-- Nhúng nhạc từ SoundCloud -->
+    <iframe
+        width="100%"
+        height="166"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/123456789&color=%23ff69b4&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+    </iframe>
+
+    <div class="header">BÁO TƯỜNG 8/3 - NGÀY QUỐC TẾ PHỤ NỮ</div>
+    <div class="nav">
+        <button onclick="showSection('y-nghia')">Ý Nghĩa</button>
+        <button onclick="showSection('hinh-anh')">Hình Ảnh</button>
+    </div>
+    
+    <div id="y-nghia" class="container active">
+        <h2>Ý Nghĩa Ngày 8/3</h2>
+        <div class="paragraph-container">
+            <img src="https://lh4.googleusercontent.com/mz_evHuYCBVB3-0mt8CfKj2Aq4RsqHaZ0lLDAxNCnekREql9SQ6Zwm9rCNWKGh8j5ipCCCx_p_wuQDW2mEMBFqiiqG_3n4ie_0XjxZIKdzy4-Geepd1BYD6HKlAKnFBaXQJnO2nr" alt="Hình ảnh minh họa 1" class="content-img">
+            <p>Ngày 8/3 năm 1857, trước sự bất bình đẳng về trả mức lương vô cùng rẻ mạt, không tương xứng với công sức họ bỏ ra của các ông chủ tư bản, các nữ công nhân đã không chịu khuất phục và đã quyết định đứng lên đấu tranh đòi tăng lương, giảm giờ làm.</p>
+        </div>
+        <div class="paragraph-container">
+            <img src="https://media.phunumoi.net.vn/files/hoanguyen/2021/07/19/nonap_-_petrograd_19170308-2259-130932.jpg" class="content-img">
+            <p>Vào ngày 8/3 năm 1917, một cuộc biểu tình nhân ngày Phụ nữ tại Petrograd, Đế quốc Nga đã làm dấy lên cuộc Cách mạng Nga 1917. Liên bang Xô viết (hay Liên Xô) đã tuyên bố ngày này là ngày nghỉ quốc gia kể từ năm 1917.</p>
+        </div>
+        
+        <div class="paragraph-container">
+            <img src="https://baoquankhu7.vn/fileman/Uploads/tbNews/7779/35.jpg" alt="Hình ảnh minh họa 5" class="content-img">
+            <p>Sau đó, ngày Quốc tế Phụ nữ này chủ yếu được tổ chức trong các nước thuộc phong trào Xã hội Chủ nghĩa và các nước Cộng sản cho đến khi được Liên Hiệp Quốc thông qua vào năm 1977.</p>
+        </div>
+        
+        <div class="paragraph-container">
+            <img src="https://media.vietnamplus.vn/images/c85de7563ed347cad2bfc202c76ef767bae9991e5d4748217595526ae9c458756c3e7958f9ff1638a963085dc4e737fca74f6b1bfe70b3203772c7979020cefa/trinh-dien-ao-dai-8-3.jpg" class="content-img">
+            <p>Ngày lễ kỷ niệm Ngày Quốc tế Phụ nữ ngày nay có thể là một ngày lễ chung ở một số quốc gia, hoặc trở thành một ngày lễ lớn bị bỏ qua ở những nơi khác. Ở một số quốc gia, ngày này là ngày để biểu tình; ở những quốc gia khác, ngày này là ngày tôn vinh nữ giới.</p>
+        </div>
+    </div>
+    
+    <div id="hinh-anh" class="container">
+        <h2>Hình Ảnh 8/3</h2>
+        <div class="image-container">
+            <img src="https://logico.com.vn/upload_images/images/2023/03/01/hinh-anh-8-3-dep-y-nghia-1.jpg" alt="Hình ảnh 1">
+            <img src="https://baohaiquanvietnam.vn/storage/users/user_6/N%C4%83m%202024/Th%C3%A1ng%203/7-3/zzzzz1.JPG" alt="Hình ảnh 2">
+            <img src="https://baohaiquanvietnam.vn/storage/users/user_6/N%C4%83m%202024/Th%C3%A1ng%203/7-3/A6.jpg" alt="Hình ảnh 3">
+            <img src="https://baohaiquanvietnam.vn/storage/users/user_6/N%C4%83m%202024/Th%C3%A1ng%203/8-3/z5229179612428_4425ff22e9865af4373a68d978e33ca9.jpg" alt="Hình ảnh 4">
+            <img src="https://baohaiquanvietnam.vn/storage/users/user_6/N%C4%83m%202024/Th%C3%A1ng%203/7-3/IMG_0123%2B.jpg" alt="Hình ảnh 5">
+            <img src="https://baohaiquanvietnam.vn/storage/users/user_6/N%C4%83m%202024/Th%C3%A1ng%203/7-3/888888.jpg" alt="Hình ảnh 6">
+        </div>
+    </div>
+    
+    <div class="footer">Chúc mừng ngày Quốc tế Phụ nữ 8/3!</div>
+</body>
+</html>
